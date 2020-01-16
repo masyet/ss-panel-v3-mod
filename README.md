@@ -24,12 +24,19 @@ apt-get install git -y
 git clone -b new_master https://github.com/****/ss-panel-v3-mod.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 
 chown -R root:root *
+
 chmod -R 755 *
+
 chown -R www:www storage
+
 chattr -i .user.ini
+
 mv .user.ini public
+
 cd public
+
 chattr +i .user.ini
+
 service nginx restart
 
 在当前目录下安装依赖
