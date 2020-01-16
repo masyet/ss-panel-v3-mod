@@ -20,7 +20,9 @@ location /
 
 cd /home/wwwroot/你的域名
 apt-get install git -y
+
 git clone -b new_master https://github.com/****/ss-panel-v3-mod.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+
 chown -R root:root *
 chmod -R 755 *
 chown -R www:www storage
